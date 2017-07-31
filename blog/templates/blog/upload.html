@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<script src="https://use.fontawesome.com/68a1a56600.js"></script>
+<head>
+    <title>Upload</title>
+    
+</head>
+<body class="subpage">
+  <header id="header">
+         {% if user.is_authenticated %}
+                <div class="inner">
+                    <a href="index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+                    <nav id="nav">
+
+                        <a href="index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a>
+                        
+                        <a href="events"><i class="fa fa-camera-retro"></i>&nbsp;Events</a>
+                        
+                        <a href="/profile"><i class="fa fa-user-circle-o"></i>&nbsp;Profile</a>
+                        <a href="about"><i class="fa fa-book"></i>&nbsp;AboutUs</a>
+                        <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a>
+                        
+                    </nav>
+                    
+
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+                {% else %}
+                <div class="inner">
+                    <a href="index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+                    <nav id="nav">
+
+                        
+                        <a href="index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a>
+                        
+
+                        <a href="events"><i class="fa fa-camera-retro"></i>&nbsp;Events</a>
+                        
+                        <a href="about"><i class="fa fa-book"></i>&nbsp;AboutUs</a>
+                        <a href="/login">Login</a>
+                        <a href="/register">SignUp</a>
+                    </nav>
+                    
+
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+                {% endif %}
+
+
+    </header>
+  <form id="form1" enctype="multipart/form-data" method="post" action="Upload.aspx">
+    <div class="row">
+      <label for="fileToUpload">Select Your Snap To Upload</label><br />
+      <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();"/>
+    </div>
+    <div id="fileName"></div>
+    <div id="fileSize"></div>
+    <div id="fileType"></div>
+    <div class="row">
+      <input type="button" onclick="uploadFile()" value="Upload" />
+    </div>
+    <div id="progressNumber"></div>
+  </form>
+</body>
+</html>

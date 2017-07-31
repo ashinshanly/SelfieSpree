@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+
+<html>
+<script src="https://use.fontawesome.com/68a1a56600.js"></script>
+	<head>
+		<title>Events</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/animate.css">
+
+
+
+
+    <!--   <style type="text/css">	
+	
+
+            
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,900,800,700,600);
+body{font-family: 'Raleway', sans-serif;}
+  h2 {
+  border-bottom: 10px solid red;
+  font-family: 'Raleway', sans-serif;
+  font-size: 65px;
+  font-weight: 900;
+  margin: 0 auto;
+  padding: 5px 0 3px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 40.2%;
+  color: white; 
+
+
+}
+img {
+  height: 200px !important;
+  
+}
+
+.row.text-center p {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin: 3px 0 30px;
+  text-transform: uppercase;
+
+}
+
+.h3, h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+}
+.btn-default {
+  background: transparent none repeat scroll 0 0;
+  border: 2px solid green;
+  border-radius: 50px;
+  text-shadow: 0 1px 0 #fff;
+  font-family: 'Raleway', sans-serif;
+
+}
+.glyphicon {
+    color: white;}
+    .caption-text p {
+  margin: 18px auto 13px;
+  text-align: center;
+  width: 91%;
+}
+.btn-default:focus, .btn-default:hover {
+  background-color: green;
+  background-position: 0 -15px;
+}
+	
+  .cuadro_intro_hover{
+    	padding: 0px;
+		position: relative;
+		overflow: hidden;
+		height: 200px;
+	}
+	.cuadro_intro_hover:hover .caption{
+		opacity: 1;
+		transform: translateY(-150px);
+		-webkit-transform:translateY(-150px);
+		-moz-transform:translateY(-150px);
+		-ms-transform:translateY(-150px);
+		-o-transform:translateY(-150px);
+	}
+	.cuadro_intro_hover img{
+		z-index: 4;
+	}
+	.cuadro_intro_hover .caption{
+		position: absolute;
+		top:150px;
+		-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+		-o-transition:all 0.3s ease-in-out;
+		-ms-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+		width: 100%;
+	}
+	.cuadro_intro_hover .blur{
+		background-color: rgba(0,0,0,0.7);
+		height: 300px;
+		z-index: 5;
+		position: absolute;
+		width: 100%;
+	}
+	.cuadro_intro_hover .caption-text{
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		height: 300px;
+		text-align: center;
+		top:-20px;
+		width: 100%;
+	}
+
+
+
+
+
+        </style> -->
+
+<style type="text/css">
+	
+
+
+
+
+
+
+	body {
+    background: black;
+    }
+
+@font-face {
+    font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 300px;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+
+
+
+
+
+
+
+/*---------------*/
+/***** Ruby *****/
+/*---------------*/
+
+figure.effect-ruby {
+	background-color: #17819c;
+}
+
+figure.effect-ruby img {
+	opacity: 0.7;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+figure.effect-ruby:hover img {
+	opacity: 0.5;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-ruby h2 {
+	margin-top: 20%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-ruby p {
+	margin: 1em 0 0;
+	padding: 3em;
+	border: 1px solid #fff;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0) scale(1.1);
+	transform: translate3d(0,20px,0) scale(1.1);
+} 
+
+figure.effect-ruby:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-ruby:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) scale(1);
+	transform: translate3d(0,0,0) scale(1);
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+<script src="/static/js/wow.min.js"></script>
+
+        <script>
+
+        	new WOW().init();
+        	
+
+        </script>
+
+
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header" class="fadeIn animated">
+				 {% if user.is_authenticated %}
+                <div class="inner">
+                    <a href="/index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+                    <nav id="nav">
+
+                        <a href="/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a>
+                        
+                        <a href="/events"><i class="fa fa-camera-retro"></i>&nbsp;Events</a>
+                        
+                        <a href="/profile"><i class="fa fa-user-circle-o"></i>&nbsp;Profile</a>
+                        <a href="/about"><i class="fa fa-book"></i>&nbsp;AboutUs</a>
+                        <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a>
+                        
+                    </nav>
+                    
+
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+                {% else %}
+                <div class="inner">
+                    <a href="/index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+                    <nav id="nav">
+
+                        
+                        <SPAN TITLE=Home><a href="/index"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></SPAN>
+                        &nbsp;
+                        &nbsp;
+
+                        <SPAN TITLE=Contests><a href="/events"><i class="fa fa-camera-retro fa-lg"></i>&nbsp;</a></SPAN>
+                        &nbsp;
+                        &nbsp;
+
+                        <SPAN TITLE=AboutUs><a href="/about"><i class="fa fa-book fa-lg"></i>&nbsp;</a></SPAN>
+                        &nbsp;
+                        &nbsp;
+                        <SPAN TITLE=Login><a href="/login"><i class="fa fa-sign-in fa-lg"></i>&nbsp;</a></SPAN>
+                        &nbsp;
+                        &nbsp;
+						<SPAN TITLE=SignUp><a href="/register"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;</a></SPAN>
+						&nbsp;
+                        &nbsp;
+						
+                    </nav>
+                    
+
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+                {% endif %}
+
+
+			</header>
+<div style="background-image: url('/static/assets/back4.jpg')" >
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<center><h2 class="zoomIn animated" style="font-weight: bold; color: white;">LIVE Contests!</h2></center>
+						<h4 class="wow zoomIn animated" data-wow-delay=".2s" style="font-weight: bold; font-size: 25px; color: white;">-Unleash Your Creativity-</h4>
+						
+					</header>
+
+					
+
+
+
+					
+					
+					
+				
+					<div class="container">
+					<div class="content">
+
+
+					
+		<div class="grid">
+			<figure class="effect-ruby wow zoomInDown animated" data-wow-delay=".5s">
+				<img src="/static/assets/space.jpg" alt="img13"/>
+				<figcaption>
+					<h2 style="color: white;">Group-<span>Fies</span></h2>
+					<p>-Rules-</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+			<figure class="effect-ruby wow zoomInDown animated" data-wow-delay=".7s">
+				<img src="/static/assets/creative.jpg" alt="img14"/>
+				<figcaption>
+					<h2 style="color: white;">GREEN <span>VIBES</span></h2>
+					<p>-Rules-</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+			<a href="#" class="button wow bounceInLeft animated" data-wow-delay=".6s"" style="float: left;">ENTER</a>
+			&nbsp;
+			&nbsp;
+			
+			
+			<a href="#" class="button wow bounceInUp animated" data-wow-delay=".6s" style="float: left;">ENTRIES</a>
+
+
+			<a href="#" class="button wow bounceInRight animated" data-wow-delay=".8s" style="float: right;">ENTER</a>
+			&nbsp;
+			&nbsp;
+			
+			<a href="#" class="button wow bounceInUp animated" data-wow-delay=".8s" style="float: right;">ENTRIES</a>
+		</div>
+		</div>
+		</div>
+
+
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+			</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Get in touch</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy;  <a href="https://templated.co">ASHIN SHANLY</a>
+					</div>
+
+				</div>
+			</footer>
+
+
+			
+
+		
+	</body>
+</html>

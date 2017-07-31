@@ -1,0 +1,193 @@
+{% load staticfiles %}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+	<script src="https://use.fontawesome.com/68a1a56600.js"></script>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<title>SelfieSpree</title>
+
+  
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static/css/main.css" />
+
+
+        <style type="text/css">	
+	
+             body {
+             	    padding: 0; margin: 0;  background-image: url("/static/assets/back4.jpg");
+                  }
+
+            p{
+            	color: white;
+            	font-weight: bold;
+            	font-size: 30px;
+
+            }
+            header{
+            	opacity: 0.8;
+            }
+
+
+
+
+            
+
+        </style>
+    </head>
+
+	<body class="subpage"> 
+
+		<!-- Header -->
+
+			<header id="header">
+				{% if user.is_authenticated %}
+				<div class="inner">
+					<a href="index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+					<nav id="nav">
+
+						<a href="index"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+						
+						<a href="events"><i class="fa fa-camera-retro fa-lg"></i>&nbsp;</a>
+						
+						<a href="/profile"><i class="fa fa-user-circle-o fa-lg"></i>&nbsp;</a>
+						<a href="about"><i class="fa fa-book fa-lg"></i>&nbsp;</a>
+						<a href="/logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>&nbsp;</a>
+						
+					</nav>
+					
+
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+				{% else %}
+				<div class="inner">
+					<a href="index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+					<nav id="nav">
+
+						
+						<a href="index"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+						
+
+						<a href="events"><i class="fa fa-camera-retro fa-lg"></i>&nbsp;</a>
+						
+						<a href="about"><i class="fa fa-book fa-lg"></i>&nbsp;</a>
+						<a href="/login"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>&nbsp;</a>
+						<a href="/register"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;</a>
+					</nav>
+					
+
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+				{% endif %}
+
+
+
+			</header>
+
+
+
+
+
+			<div class="container">
+
+
+
+			<h2><center><strong style="color: white;">About Us</strong></center></h2>
+
+			<div class="rows">
+			<div class="col-sm-6">
+			<div class="container">
+				
+				
+				<img src="/static/assets/ashin.jpg" class="img-circle" width="304" height="290">
+				<p>Ashin Shanly</p>
+				</div>
+			</div>
+			
+
+				
+
+				<div class="col-sm-6">
+					
+				<img src="/static/assets/creative.jpg" class="img-circle" width="304" height="290"><p>Heyy There!!</p>
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+    <div style="margin: 24px 0;">
+       
+      <a href="#"><i class="fa fa-twitter fa-lg"></i></a>  
+      
+      <a href="https://www.facebook.com/ashinshanly"><i class="fa fa-facebook fa-lg"></i></a> 
+   </div>
+   
+
+			</div>
+
+			
+
+
+			
+
+
+
+
+
+
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Get in touch</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; : <a href="https://facebook.com/ashinshanly">ASHIN SHANLY</a>
+					</div>
+
+				</div>
+			</footer> 
+
+		<!-- Scripts -->
+		
+
+
+
+
+	</body>
+	</html> 
+

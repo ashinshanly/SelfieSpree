@@ -1,0 +1,76 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<script src="https://use.fontawesome.com/68a1a56600.js"></script>
+<head>
+	<title>LOGGED-OUT</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+	<style type="text/css">
+		  body{
+
+			 background-image: url("/static/assets/back4.jpg");
+		  }
+
+
+	</style>
+
+</head>
+<body class="subpage">
+	<header id="header" style="background-color: #6cc091">
+				 {% if user.is_authenticated %}
+                <div class="inner">
+                    <a href="/index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+                    <nav id="nav">
+
+                        <a href="/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a>
+                        
+                        <a href="/events"><i class="fa fa-camera-retro"></i>&nbsp;Events</a>
+                        
+                        <a href="/profile"><i class="fa fa-user-circle-o"></i>&nbsp;Profile</a>
+                        <a href="/about"><i class="fa fa-book"></i>&nbsp;AboutUs</a>
+                        <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a>
+                        
+                    </nav>
+                    
+
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+                {% else %}
+                <div class="inner">
+                    <a href="/index" class="logo"><strong>ONLine</strong>SelfieContest</a>
+                    <nav id="nav">
+
+                        
+                        <a href="/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a>
+                        
+
+                        <a href="/events"><i class="fa fa-camera-retro"></i>&nbsp;Events</a>
+                        
+                        <a href="/about"><i class="fa fa-book"></i>&nbsp;AboutUs</a>
+                        <a href="/login">Login</a>
+                        <a href="/register">SignUp</a>
+                    </nav>
+                    
+
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+                {% endif %}
+
+
+	  </header>
+     
+     <div class="container">
+     <br>
+     	<h2><center><strong style="color: white;">You Have Logged Out!</strong></center></h2>
+     </div>
+     <br>
+     <p><center><strong style="color: white;">ThankYou For Visiting Us!</strong></center></p>
+     <br>
+
+
+</body>
+</html>
